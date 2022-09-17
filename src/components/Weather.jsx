@@ -14,7 +14,7 @@ export default function Weather(){
 
 	async function getWeather(city = "london"){
 		try{
-			const request = await fetch(`http://api.weatherapi.com/v1/current.json?key=${key}&q=${city}&aqi=no`)
+			const request = await fetch(`https://api.weatherapi.com/v1/current.json?key=${key}&q=${city}&aqi=no`)
 			const response = await request.json()
 			setLoading(false)
 			setWeather(response)
